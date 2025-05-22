@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Elegante</title>
+    
+    <!-- Meta Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s) {
+            if(f.fbq)return;
+            n=f.fbq=function(){n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;
+            n.push=n;
+            n.loaded=!0;
+            n.version='2.0';
+            n.queue=[];
+            t=b.createElement(e);
+            t.async=!0;
+            t.src=v;
+            s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)
+        }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '9856359677788421');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=9856359677788421&ev=PageView&noscript=1" />
+    </noscript>
+    <!-- End Meta Pixel Code -->
+    
+    <script>
+        tailwindConfig = {
+            theme: {
+                extend: {
+                    colors: {
+                        purple: {
+                            500: '#8A2BE2',
+                        },
+                        pink: {
+                            500: '#FF69B4',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #8A2BE2 0%, #FF69B4 100%);
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .video-placeholder {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            transition: all 0.3s ease;
+        }
+        .video-placeholder:hover {
+            transform: scale(1.02);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        .continue-btn {
+            background: linear-gradient(45deg, #FF69B4 0%, #8A2BE2 100%);
+            transition: all 0.3s ease;
+            letter-spacing: 1px;
+        }
+        .continue-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+        }
+        .continue-btn:active {
+            transform: translateY(0);
+        }
+        .chat-bubble {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        .fa-comment-dots:before {
+            content: "💬";
+            font-style: normal;
+        }
+    </style>
+</head>
+<body class="flex flex-col items-center justify-center p-4">
+    <div class="text-center max-w-2xl w-full">
+        <h1 class="text-white text-3xl md:text-4xl font-bold mb-6 drop-shadow-lg">Bem-vindo</h1>
+        
+        <div class="video-placeholder rounded-xl overflow-hidden mb-8 w-full max-w-lg mx-auto">
+            <img 
+                src="https://i.pinimg.com/736x/c6/01/f9/c601f998c029e8a40ca6ed91dd02e9bf.jpg" 
+                alt="Video placeholder" 
+                class="w-full h-auto object-cover"
+                loading="lazy"
+            >
+            <div class="bg-black bg-opacity-50 py-2 px-4 flex items-center justify-center">
+                <div class="flex items-center chat-bubble">
+                    <span class="text-pink-400 mr-2 text-xl">💬</span>
+                    <span class="text-white font-medium">TE AGUARDANDO...</span>
+                </div>
+            </div>
+        </div>
+        
+        <button onclick="handleButtonClick()" class="continue-btn text-white font-bold py-3 px-8 rounded-full text-lg focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50">
+            Clique para continuar
+        </button>
+        
+        <div class="mt-8 text-white text-sm opacity-70">
+            <p>© 2025 Todos os direitos reservados</p>
+        </div>
+    </div>
+
+    <script>
+        function handleButtonClick() {
+            // Track the ViewContent event before redirecting
+            fbq('track', 'ViewContent');
+            
+            // Redirect to Telegram bot after a small delay to ensure the event is sent
+            setTimeout(function() {
+                window.location.href = 'https://t.me/PagSofiapix_bot';
+            }, 200);
+        }
+    </script>
+<p style="border-radius: 8px; text-align: center; font-size: 12px; color: #fff; margin-top: 16px;position: fixed; left: 8px; bottom: 8px; z-index: 10; background: rgba(0, 0, 0, 0.8); padding: 4px 8px;">Made with <img src="https://enzostvs-deepsite.hf.space/logo.svg" alt="DeepSite Logo" style="width: 16px; height: 16px; vertical-align: middle;display:inline-block;margin-right:3px;filter:brightness(0) invert(1);"><a href="https://enzostvs-deepsite.hf.space" style="color: #fff;text-decoration: underline;" target="_blank" >DeepSite</a> - 🧬 <a href="https://enzostvs-deepsite.hf.space?remix=hgirl3451/pressel-leve-s-fia" style="color: #fff;text-decoration: underline;" target="_blank" >Remix</a></p></body>
+</html>
